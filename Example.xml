@@ -1,0 +1,45 @@
+<!-- EXAMPLE SOUNDSYSTEM XML SETUP FILE -->
+
+
+
+<!-- Add a couple of library plug-ins: -->
+	< addLibrary
+		className = paulscode.sound.libraries.LibraryLWJGLOpenAL />
+
+	< addLibrary
+		className = paulscode.sound.libraries.LibraryJavaSound />
+
+
+<!-- Add some codec plug-ins: -->
+
+	< setCodec
+		extension = ogg
+		className = paulscode.sound.codecs.CodecJOrbis />
+
+	< setCodec
+		extension = wav
+		className = paulscode.sound.codecs.CodecWav />
+
+<!-- Instantiate the SoundSystem: -->
+	< create />
+
+
+<!-- Load a clip into memory: -->
+    < loadSound
+        filename = tada.wav />
+
+<!-- Create a new source: -->
+    < newSource
+        priority = true
+        toStream = false
+        toLoop = false
+        sourcename = source_1
+        filename = bell.wav
+        x = 0
+        y = 0
+        z = 0
+        attModel = ATTENUATION_ROLLOFF
+        distOrRoll = 0.03 />
+
+
+<!-- THATS ALL, FOLKS! -->
