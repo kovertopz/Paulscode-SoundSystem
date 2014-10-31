@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.paulscode</groupId>
+    <artifactId>Paulscode-SoundSystem</artifactId>
+    <version>0.0.1</version>
+    <inceptionYear>2014</inceptionYear>
+    <packaging>jar</packaging>
+
+    <developers>
+        <developer>
+            <id>kovertopz</id>
+            <name>Jason Sorensen</name>
+            <email>sorensenj@smert.net</email>
+            <url>http://smert.net</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/kovertopz/Paulscode-SoundSystem.git</connection>
+        <developerConnection>scm:git:git@github.com:kovertopz/Paulscode-SoundSystem.git</developerConnection>
+        <url>https://github.com/kovertopz/Paulscode-SoundSystem</url>
+    </scm>
+
+    <properties>
+        <junit.version>4.11</junit.version>
+        <lwjgl.version>2.9.1</lwjgl.version>
+        <mavencompiler.version>2.5.1</mavencompiler.version>
+        <mavenjavadoc.version>2.10.1</mavenjavadoc.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.lwjgl.lwjgl</groupId>
+            <artifactId>lwjgl</artifactId>
+            <version>${lwjgl.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.lwjgl.lwjgl</groupId>
+            <artifactId>lwjgl_util</artifactId>
+            <version>${lwjgl.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${mavencompiler.version}</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${mavenjavadoc.version}</version>
+                <configuration>
+                    <author>false</author>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+
+</project>
